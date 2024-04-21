@@ -19,6 +19,6 @@ autoinstall:
   packages:
     - vim
   late-commands:
-    - "echo 'curl -s http://wttr.in/Your_City?0' > /etc/skel/show-weather.sh"  # Replace 'Your_City' with your actual city or let it auto-detect
+    - "echo 'curl -s http://wttr.in/London' > /etc/skel/show-weather.sh"
     - "chmod +x /etc/skel/show-weather.sh"
     - "echo '~/show-weather.sh' >> /etc/skel/.bashrc"
