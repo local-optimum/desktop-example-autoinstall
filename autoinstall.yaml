@@ -19,6 +19,4 @@ autoinstall:
   packages:
     - vim
   late-commands:
-    - "echo 'curl -s http://wttr.in/London' > /etc/skel/show-weather.sh"
-    - "chmod +x /etc/skel/show-weather.sh"
-    - "echo '~/show-weather.sh' >> /etc/skel/.bashrc"
+    - "gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'"
