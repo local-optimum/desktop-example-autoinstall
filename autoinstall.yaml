@@ -1,0 +1,25 @@
+autoinstall:
+  version: 1
+  identity:
+    hostname: ubuntu-desktop
+    username: local-optimum
+    password: "$6$ZE4WV3QRJhPUnsNv$BpkTBYjUOxOiWV5sNPYDSitTwxW.3NHLmhRqptzpa8a4KTxGpkvMaSDbyq4PVri9kdpD1t7ldUBgwB6uveObg."
+  storage:
+    layout:
+      name: lvm
+  snaps:
+    - name: spotify
+      classic: false
+    - name: telegram-desktop
+      classic: false
+    - name: obsidian
+      classic: false
+    - name: code
+      classic: true
+  packages:
+    - vim
+  late-commands:
+    - "cd /tmp && wget https://repo2.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.3-3_all.deb"
+    - "dpkg -i /tmp/protonvpn-stable-release_1.0.3-3_all.deb && apt-get update"
+    - "apt-get install -y proton-vpn-gnome-desktop"
+    - 'echo "Installation of Proton VPN completed successfully"'
