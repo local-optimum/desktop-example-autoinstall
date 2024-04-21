@@ -13,7 +13,7 @@ autoinstall:
     - name: telegram-desktop
       classic: false
     - name: obsidian
-      classic: false
+      classic: true
     - name: code
       classic: true
   packages:
