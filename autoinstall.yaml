@@ -18,5 +18,6 @@ autoinstall:
       classic: true
   packages:
     - vim
-  late-commands:
-    - "gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'"
+  ssh:
+    install-server: true
+    allow-pw: true
