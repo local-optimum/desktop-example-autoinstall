@@ -19,7 +19,11 @@ autoinstall:
   packages:
     - vim
   late-commands:
-    - "cd /tmp && wget https://repo2.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.3-3_all.deb"
-    - "dpkg -i /tmp/protonvpn-stable-release_1.0.3-3_all.deb && apt-get update"
-    - "apt-get install -y proton-vpn-gnome-desktop"
-    - 'echo "Installation of Proton VPN completed successfully"'
+    - "wget -O /tmp/protonvpn.deb https://repo2.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.3-3_all.deb"
+    - "dpkg -i /tmp/protonvpn.deb"
+    - "apt-get update"
+    - "apt-get install -y protonvpn"
+    - "systemctl enable protonvpn.service"
+    - "systemctl start protonvpn.service"
+    - 'echo "ProtonVPN installation completed" >> /var/log/installation.log'
+
