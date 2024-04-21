@@ -21,7 +21,7 @@ autoinstall:
   late-commands:
     - "wget -O /tmp/protonvpn.deb https://repo2.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.3-3_all.deb"
     - "dpkg -i /tmp/protonvpn.deb"
-    - "apt-get update"
-    - "apt-get install -y protonvpn"
+    - "apt update"
+    - "apt install proton-vpn-gnome-desktop"
     - 'echo "ProtonVPN installation completed" >> /var/log/installation.log'
 
