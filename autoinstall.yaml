@@ -23,7 +23,5 @@ autoinstall:
     - "dpkg -i /tmp/protonvpn.deb"
     - "apt-get update"
     - "apt-get install -y protonvpn"
-    - "systemctl enable protonvpn.service"
-    - "systemctl start protonvpn.service"
     - 'echo "ProtonVPN installation completed" >> /var/log/installation.log'
 
