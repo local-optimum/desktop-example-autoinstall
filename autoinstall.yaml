@@ -22,4 +22,4 @@ autoinstall:
     - curtin in-target -- wget https://repo2.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.3-3_all.deb
     - curtin in-target -- dpkg -i ./protonvpn-stable-release_1.0.3-3_all.deb
     - curtin in-target -- apt update
-    - curtin in-target -- apt install proton-vpn-gnome-desktop
+    - curtin in-target -- apt install -y proton-vpn-gnome-desktop
