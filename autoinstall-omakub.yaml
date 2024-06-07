@@ -8,4 +8,5 @@ autoinstall:
     layout:
       name: lvm
   late-commands:
-    - curtin in-target -- wget -qO- https://omakub.org/install | bash -y
+    - curtin in-target -- wget -qO- https://omakub.org/install | bash -s -- --yes
+
